@@ -7,7 +7,7 @@ export default function MicrogreensPage() {
 
       <div className="grid gap-12 sm:gap-16 md:gap-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {/* Sunflower Microgreens */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/sunflower.jpeg"  // Replace with actual image URL
             alt="Sunflower Microgreens"
@@ -25,7 +25,7 @@ export default function MicrogreensPage() {
         </div>
 
         {/* Radish Microgreens */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/radish.jpeg"  // Replace with actual image URL
             alt="Radish Microgreens"
@@ -43,7 +43,7 @@ export default function MicrogreensPage() {
         </div>
 
         {/* Pea Shoots */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/peashoots.jpeg"  // Replace with actual image URL
             alt="Pea Shoots"
@@ -61,7 +61,7 @@ export default function MicrogreensPage() {
         </div>
 
         {/* Broccoli Microgreens */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/beets.jpeg"  // Replace with actual image URL
             alt="Beets Microgreens"
@@ -79,7 +79,7 @@ export default function MicrogreensPage() {
         </div>
 
         {/* Arugula Microgreens */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/arugula.jpeg"  // Replace with actual image URL
             alt="Arugula Microgreens"

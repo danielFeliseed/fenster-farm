@@ -7,7 +7,7 @@ export default function HerbsPage() {
 
       <div className="grid gap-12 sm:gap-16 md:gap-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {/* Basil */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/basil.jpeg"  // Replace with actual image URL
             alt="Basil"
@@ -25,7 +25,7 @@ export default function HerbsPage() {
         </div>
 
         {/* Mint */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/mint.jpeg"  // Replace with actual image URL
             alt="Mint"
@@ -43,7 +43,7 @@ export default function HerbsPage() {
         </div>
 
         {/* Thyme */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/thyme.jpeg"  // Replace with actual image URL
             alt="Thyme"
@@ -61,7 +61,7 @@ export default function HerbsPage() {
         </div>
 
         {/* Dill */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/dill.jpeg"  // Replace with actual image URL
             alt="Dill"

@@ -7,7 +7,7 @@ export default function LettucePage() {
 
       <div className="grid gap-12 sm:gap-16 md:gap-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {/* Butterhead Lettuce */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/butterhead.jpeg"  // Replace with actual image URL
             alt="Butterhead Lettuce"
@@ -25,7 +25,7 @@ export default function LettucePage() {
         </div>
 
         {/* Romaine Lettuce */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/romaine.jpeg"  // Replace with actual image URL
             alt="Romaine Lettuce"
@@ -43,7 +43,7 @@ export default function LettucePage() {
         </div>
 
         {/* Oak Leaf Lettuce */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/oakleaf.jpeg"  // Replace with actual image URL
             alt="Oak Leaf Lettuce"
@@ -61,7 +61,7 @@ export default function LettucePage() {
         </div>
 
         {/* Little Gem Lettuce */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/redasian.jpeg"  // Replace with actual image URL
             alt="Red Asian Lettuce"
@@ -79,7 +79,7 @@ export default function LettucePage() {
         </div>
 
         {/* Green Leaf Lettuce */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/greenleaf.jpeg"  // Replace with actual image URL
             alt="Green Leaf Lettuce"
@@ -97,7 +97,7 @@ export default function LettucePage() {
         </div>
 
         {/* Red Leaf Lettuce */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
+        <div className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
           <Image
             src="/redleaf.jpeg"  // Replace with actual image URL
             alt="Red Leaf Lettuce"
