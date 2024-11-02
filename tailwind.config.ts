@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'pearl-white': '#F5F5F5', // Light off-white color
+        'vintage-yellow': '#FFF8DC', // Cornsilk as a vintage yellow example
       },
     },
   },
