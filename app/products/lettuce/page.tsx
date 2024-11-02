@@ -9,11 +9,11 @@ export default function LettucePage() {
         {/* Butterhead Lettuce */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-butterhead.jpg"  // Replace with actual image URL
+            src="/butterhead.jpeg"  // Replace with actual image URL
             alt="Butterhead Lettuce"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Butterhead Lettuce</h2>
           <p className="text-gray-600 mt-2">
@@ -27,11 +27,11 @@ export default function LettucePage() {
         {/* Romaine Lettuce */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-romaine.jpg"  // Replace with actual image URL
+            src="/romaine.jpeg"  // Replace with actual image URL
             alt="Romaine Lettuce"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Romaine Lettuce</h2>
           <p className="text-gray-600 mt-2">
@@ -45,11 +45,11 @@ export default function LettucePage() {
         {/* Oak Leaf Lettuce */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-oakleaf.jpg"  // Replace with actual image URL
+            src="/oakleaf.jpeg"  // Replace with actual image URL
             alt="Oak Leaf Lettuce"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Oak Leaf Lettuce</h2>
           <p className="text-gray-600 mt-2">
@@ -63,15 +63,15 @@ export default function LettucePage() {
         {/* Little Gem Lettuce */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-littlegem.jpg"  // Replace with actual image URL
-            alt="Little Gem Lettuce"
+            src="/redasian.jpeg"  // Replace with actual image URL
+            alt="Red Asian Lettuce"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
-          <h2 className="text-2xl font-bold text-gray-800">Little Gem Lettuce</h2>
+          <h2 className="text-2xl font-bold text-gray-800">Red Asian Lettuce</h2>
           <p className="text-gray-600 mt-2">
-            Small and crunchy, Little Gem lettuce is perfect for single-serving salads and can be used as lettuce cups.
+            Small and crunchy, Red Asian lettuce is perfect for single-serving salads and can be used as lettuce cups.
           </p>
           <p className="text-gray-600 mt-2 italic">
             Best for: Lettuce cups, individual salads, and appetizer plates.
@@ -81,11 +81,11 @@ export default function LettucePage() {
         {/* Green Leaf Lettuce */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-greenleaf.jpg"  // Replace with actual image URL
+            src="/greenleaf.jpeg"  // Replace with actual image URL
             alt="Green Leaf Lettuce"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Green Leaf Lettuce</h2>
           <p className="text-gray-600 mt-2">
@@ -99,11 +99,11 @@ export default function LettucePage() {
         {/* Red Leaf Lettuce */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-redleaf.jpg"  // Replace with actual image URL
+            src="/redleaf.jpeg"  // Replace with actual image URL
             alt="Red Leaf Lettuce"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Red Leaf Lettuce</h2>
           <p className="text-gray-600 mt-2">

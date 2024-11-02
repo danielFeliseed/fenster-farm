@@ -9,11 +9,11 @@ export default function HerbsPage() {
         {/* Basil */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-basil.jpg"  // Replace with actual image URL
+            src="/basil.jpeg"  // Replace with actual image URL
             alt="Basil"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Basil</h2>
           <p className="text-gray-600 mt-2">
@@ -27,11 +27,11 @@ export default function HerbsPage() {
         {/* Mint */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-mint.jpg"  // Replace with actual image URL
+            src="/mint.jpeg"  // Replace with actual image URL
             alt="Mint"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Mint</h2>
           <p className="text-gray-600 mt-2">
@@ -42,32 +42,14 @@ export default function HerbsPage() {
           </p>
         </div>
 
-        {/* Rosemary */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
-          <Image
-            src="/placeholder-rosemary.jpg"  // Replace with actual image URL
-            alt="Rosemary"
-            width={300}
-            height={200}
-            className="rounded-lg mb-4"
-          />
-          <h2 className="text-2xl font-bold text-gray-800">Rosemary</h2>
-          <p className="text-gray-600 mt-2">
-            Woody and fragrant, rosemary pairs well with meats and roasted vegetables.
-          </p>
-          <p className="text-gray-600 mt-2 italic">
-            Best for: Roasted meats, potatoes, and marinades.
-          </p>
-        </div>
-
         {/* Thyme */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-thyme.jpg"  // Replace with actual image URL
+            src="/thyme.jpeg"  // Replace with actual image URL
             alt="Thyme"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Thyme</h2>
           <p className="text-gray-600 mt-2">
@@ -78,32 +60,14 @@ export default function HerbsPage() {
           </p>
         </div>
 
-        {/* Oregano */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
-          <Image
-            src="/placeholder-oregano.jpg"  // Replace with actual image URL
-            alt="Oregano"
-            width={300}
-            height={200}
-            className="rounded-lg mb-4"
-          />
-          <h2 className="text-2xl font-bold text-gray-800">Oregano</h2>
-          <p className="text-gray-600 mt-2">
-            Robust and slightly bitter, oregano is a staple in Mediterranean cooking.
-          </p>
-          <p className="text-gray-600 mt-2 italic">
-            Best for: Pizza, pasta sauces, and grilled vegetables.
-          </p>
-        </div>
-
         {/* Dill */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-dill.jpg"  // Replace with actual image URL
+            src="/dill.jpeg"  // Replace with actual image URL
             alt="Dill"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Dill</h2>
           <p className="text-gray-600 mt-2">

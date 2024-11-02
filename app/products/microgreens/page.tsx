@@ -9,11 +9,11 @@ export default function MicrogreensPage() {
         {/* Sunflower Microgreens */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-sunflower.jpg"  // Replace with actual image URL
+            src="/sunflower.jpeg"  // Replace with actual image URL
             alt="Sunflower Microgreens"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Sunflower Microgreens</h2>
           <p className="text-gray-600 mt-2">
@@ -27,7 +27,7 @@ export default function MicrogreensPage() {
         {/* Radish Microgreens */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-radish.jpg"  // Replace with actual image URL
+            src="/radish.jpeg"  // Replace with actual image URL
             alt="Radish Microgreens"
             width={300}
             height={200}
@@ -45,11 +45,11 @@ export default function MicrogreensPage() {
         {/* Pea Shoots */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-peashoots.jpg"  // Replace with actual image URL
+            src="/peashoots.jpeg"  // Replace with actual image URL
             alt="Pea Shoots"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Pea Shoots</h2>
           <p className="text-gray-600 mt-2">
@@ -63,15 +63,15 @@ export default function MicrogreensPage() {
         {/* Broccoli Microgreens */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-broccoli.jpg"  // Replace with actual image URL
-            alt="Broccoli Microgreens"
+            src="/beets.jpeg"  // Replace with actual image URL
+            alt="Beets Microgreens"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
-          <h2 className="text-2xl font-bold text-gray-800">Broccoli Microgreens</h2>
+          <h2 className="text-2xl font-bold text-gray-800">Beets Microgreens</h2>
           <p className="text-gray-600 mt-2">
-            Mild and packed with nutrients, broccoli microgreens are versatile and health-boosting.
+            Mild and packed with nutrients, beets microgreens are versatile and health-boosting.
           </p>
           <p className="text-gray-600 mt-2 italic">
             Best for: Smoothies, salads, and wraps.
@@ -81,11 +81,11 @@ export default function MicrogreensPage() {
         {/* Arugula Microgreens */}
         <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
           <Image
-            src="/placeholder-arugula.jpg"  // Replace with actual image URL
+            src="/arugula.jpeg"  // Replace with actual image URL
             alt="Arugula Microgreens"
             width={300}
             height={200}
-            className="rounded-lg mb-4"
+            className="rounded-lg object-cover h-[300px] w[200px]  mb-4"
           />
           <h2 className="text-2xl font-bold text-gray-800">Arugula Microgreens</h2>
           <p className="text-gray-600 mt-2">
@@ -93,24 +93,6 @@ export default function MicrogreensPage() {
           </p>
           <p className="text-gray-600 mt-2 italic">
             Best for: Pizza, salads, and sandwiches.
-          </p>
-        </div>
-
-        {/* Basil Microgreens */}
-        <div className="card bg-white shadow-xl p-6 rounded-lg text-center">
-          <Image
-            src="/placeholder-basil.jpg"  // Replace with actual image URL
-            alt="Basil Microgreens"
-            width={300}
-            height={200}
-            className="rounded-lg mb-4"
-          />
-          <h2 className="text-2xl font-bold text-gray-800">Basil Microgreens</h2>
-          <p className="text-gray-600 mt-2">
-            Fresh and aromatic, basil microgreens are perfect for adding an herbaceous touch to your dishes.
-          </p>
-          <p className="text-gray-600 mt-2 italic">
-            Best for: Pasta, pizza, and Italian dishes.
           </p>
         </div>
       </div>

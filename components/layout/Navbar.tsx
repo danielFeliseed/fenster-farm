@@ -74,7 +74,7 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <button className="btn hidden sm:block">
+          <button className="btn-info hidden sm:block">
             Contact Us
           </button>
         </div>

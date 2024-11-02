@@ -70,7 +70,7 @@ export default function Home() {
       </section>
 
       {/* Our Product Section Carousel */}
-      <section className="py-20 px-8 sm:px-20">
+      <section className="px-8 sm:px-20">
         <h2 className="text-4xl font-bold text-center mb-12 text-black">
           What We Grow
         </h2>
@@ -180,7 +180,7 @@ export default function Home() {
         </Swiper>
 
         {/* Farmers Market Section */}
-        <section className="py-20 px-8 sm:px-20 bg-white">
+        <section className="py-10 bg-white">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
             Visit Us at the Farmers Markets
           </h2>
@@ -210,7 +210,7 @@ export default function Home() {
             {/* Market Card 2 */}
             <div className="bg-white shadow-lg rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
               <Image
-                src="/IMG_9713.JPG"  // Replace with actual image URL
+                src="/argicenter2.jpeg"  // Replace with actual image URL
                 alt="Parkside Market"
                 width={300}
                 height={200}
@@ -248,7 +248,7 @@ export default function Home() {
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-20 px-8 sm:px-20 bg-white">
+        <section className="py-5 sm:py-10  bg-white">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Contact Us</h2>
           <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-12">
             Have questions? Want to learn more about our products or arrange a visit? Fill out the form below, and we’ll get in touch!
