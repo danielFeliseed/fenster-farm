@@ -179,26 +179,119 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
 
-        <style jsx global>{`
-          .swiper-pagination-bullets {
-            bottom: -20px;
-          }
-          .swiper-pagination-bullet {
-            background: #ccc;
-            opacity: 0.7;
-            width: 12px;
-            height: 12px;
-          }
-          .swiper-pagination-bullet-active {
-            background: #333;
-            opacity: 1;
-          }
-          .swiper-button-next,
-          .swiper-button-prev {
-            color: #555;
-            font-size: 24px;
-          }
-        `}</style>
+        {/* Farmers Market Section */}
+        <section className="py-20 px-8 sm:px-20 bg-white">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+            Visit Us at the Farmers Markets
+          </h2>
+          <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+            Experience the freshness firsthand! We participate in farmers markets around the area every week. Stop by to pick up the freshest produce and chat with us about our farming practices.
+          </p>
+          <div className="grid gap-8 sm:gap-12 md:gap-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Market Card 1 */}
+            <div className="bg-white shadow-lg rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+              <Image
+                src="/IMG_9713.JPG"  // Replace with actual image URL
+                alt="City Market"
+                width={300}
+                height={200}
+                className="rounded-lg object-cover w-full h-[200px] mb-4"
+              />
+              <h3 className="text-2xl font-bold text-gray-800">Midtown Farmers Market</h3>
+              <p className="text-gray-600 mt-2">Downtown Main Square</p>
+              <p className="text-gray-700 mt-2 font-medium">
+                Saturdays: 9:00 AM - 2:00 PM
+              </p>
+              <Link href="#" className="text-green-600 mt-4 inline-block font-semibold">
+                See Details
+              </Link>
+            </div>
+
+            {/* Market Card 2 */}
+            <div className="bg-white shadow-lg rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+              <Image
+                src="/IMG_9713.JPG"  // Replace with actual image URL
+                alt="Parkside Market"
+                width={300}
+                height={200}
+                className="rounded-lg object-cover w-full h-[200px] mb-4"
+              />
+              <h3 className="text-2xl font-bold text-gray-800">Cordova Argicenter Farmers Market</h3>
+              <p className="text-gray-600 mt-2">Green Park, West Pavilion</p>
+              <p className="text-gray-700 mt-2 font-medium">
+                Sundays: 8:00 AM - 1:00 PM
+              </p>
+              <Link href="#" className="text-green-600 mt-4 inline-block font-semibold">
+                See Details
+              </Link>
+            </div>
+
+            {/* Market Card 3 */}
+            <div className="bg-white shadow-lg rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+              <Image
+                src="/farm4.jpg"  // Replace with actual image URL
+                alt="Riverfront Market"
+                width={300}
+                height={200}
+                className="rounded-lg object-cover w-full h-[200px] mb-4"
+              />
+              <h3 className="text-2xl font-bold text-gray-800">Lightfoot Farmers Market</h3>
+              <p className="text-gray-600 mt-2">Riverfront Plaza</p>
+              <p className="text-gray-700 mt-2 font-medium">
+                Wednesdays: 3:00 PM - 7:00 PM
+              </p>
+              <Link href="#" className="text-green-600 mt-4 inline-block font-semibold">
+                See Details
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form Section */}
+        <section className="py-20 px-8 sm:px-20 bg-white">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Contact Us</h2>
+          <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+            Have questions? Want to learn more about our products or arrange a visit? Fill out the form below, and we’ll get in touch!
+          </p>
+
+          <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <form className="form-control space-y-6">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-gray-700 font-semibold">Name</span>
+                </label>
+                <input type="text" placeholder="Your Name" className="input input-bordered bg-white w-full" />
+              </div>
+
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-gray-700 font-semibold">Email</span>
+                </label>
+                <input type="email" placeholder="Your Email" className="input input-bordered bg-white w-full" />
+              </div>
+
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-gray-700 font-semibold">Subject</span>
+                </label>
+                <input type="text" placeholder="Subject" className="input input-bordered bg-white w-full" />
+              </div>
+
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-gray-700 font-semibold">Message</span>
+                </label>
+                <textarea className="textarea textarea-bordered bg-white w-full h-24" placeholder="Your Message"></textarea>
+              </div>
+
+              <div>
+                <button type="submit" className="btn btn-black w-full mt-4">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
       </section>
     </div>
   );
