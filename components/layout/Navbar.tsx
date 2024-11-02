@@ -28,9 +28,9 @@ export default function Navbar() {
               <li>
                 <Link href="/products">Products</Link>
               </li>
-              <li>
+              {/* <li>
                 <a>Our Story</a>
-              </li>
+              </li> */}
               <li>
                 <details>
                   <summary>Socials</summary>
@@ -55,9 +55,9 @@ export default function Navbar() {
             <li>
                 <Link href="/products">Products</Link>
             </li>
-            <li>
+            {/* <li>
               <a>Our Story</a>
-            </li>
+            </li> */}
             <li>
               <details>
                 <summary>Socials</summary>

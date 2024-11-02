@@ -52,7 +52,7 @@ export default function Home() {
         {/* Replace background image with a looping video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src="/video.mp4"
+          src="/movie.MOV"
           loop
           autoPlay
           muted
