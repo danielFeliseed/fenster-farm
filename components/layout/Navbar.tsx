@@ -36,10 +36,10 @@ export default function Navbar() {
                   <summary>Socials</summary>
                   <ul className="p-2 bg-pearl-white">
                     <li>
-                      <a>Facebook</a>
+                      <a target='_blank' href="https://www.facebook.com/fensterfarms">Facebook</a>
                     </li>
                     <li>
-                      <a>YouTube</a>
+                      <a target='_blank' href="https://www.youtube.com/@FensterfarmGreenhouse">YouTube</a>
                     </li>
                   </ul>
                 </details>
@@ -61,12 +61,12 @@ export default function Navbar() {
             <li>
               <details>
                 <summary>Socials</summary>
-                <ul className="p-2 bg-pearl-white text-black">
-                  <li>
-                    <a>Facebook</a>
+                <ul className="p-2 bg-pearl-white z-40 text-black">
+                  <li className="">
+                    <a target='_blank' href="https://www.facebook.com/fensterfarms">Facebook</a>
                   </li>
                   <li>
-                    <a>YouTube</a>
+                    <a target='_blank' href="https://www.youtube.com/@FensterfarmGreenhouse">YouTube</a>
                   </li>
                 </ul>
               </details>
