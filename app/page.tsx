@@ -48,9 +48,19 @@ export default function Home() {
       <section
         ref={heroRef}
         className="relative w-full h-[60vh] sm:h-[70vh] bg-cover bg-center z-1 opacity-0"
-        style={{ backgroundImage: "url('/farm5.jpg')" }}
       >
+        {/* Replace background image with a looping video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/video.mp4"
+          loop
+          autoPlay
+          muted
+          playsInline // For mobile compatibility
+        ></video>
+
         <div className="absolute inset-0 bg-black opacity-60"></div>
+
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 animate__animated animate__fadeInLeft">
           <h1 className="text-5xl font-bold" style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}>
             Freshness Takes Root Here
