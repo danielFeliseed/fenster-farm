@@ -1,6 +1,8 @@
+import Link from 'next/link';
+
 export default function Navbar() {
     return (
-      <div className="navbar bg-white shadow-md py-4">
+      <div className="navbar bg-white shadow-md border-b py-4">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,7 +26,7 @@ export default function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] w-52 bg-white text-black rounded-box shadow"
             >
               <li>
-                <a>Products</a>
+                <Link href="/products">Products</Link>
               </li>
               <li>
                 <a>Our Story</a>
@@ -44,14 +46,14 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-2xl font-bold text-black">
+          <Link href="/" className="btn btn-ghost normal-case text-2xl font-bold text-black">
             Fenster Farm
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-black">
             <li>
-              <a>Products</a>
+                <Link href="/products">Products</Link>
             </li>
             <li>
               <a>Our Story</a>

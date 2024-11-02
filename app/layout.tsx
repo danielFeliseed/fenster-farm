@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "animate.css";
 import Navbar from "../components/layout/Navbar";
 
 const geistSans = localFont({
@@ -31,6 +32,10 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        {/* Footer */}
+        <footer className="bg-white border py-6 mt-12 text-center text-black">
+          <p>© 2024 Fenster Farm | All Rights Reserved</p>
+        </footer>
       </body>
     </html>
   );
