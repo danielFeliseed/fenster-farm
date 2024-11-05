@@ -30,7 +30,7 @@ export default function Home() {
     };
 
     const observer = new IntersectionObserver(animateOnScroll, {
-      threshold: 0.5,
+      threshold: 0.2,
     });
 
     if (heroRef.current) observer.observe(heroRef.current);

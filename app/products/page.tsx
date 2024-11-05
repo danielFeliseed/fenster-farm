@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 export default function Products() {
     return (
-        <div className="min-h-screen bg-white font-sans py-16 px-8 sm:px-20">
-            <h1 className="text-5xl font-bold text-center mb-12 text-gray-900">Our Products</h1>
+        <div className="min-h-screen bg-white font-sans py-16 px-4 sm:px-8 lg:px-20">
+            <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-gray-900">Our Products</h1>
 
-            <div className="grid gap-12 sm:gap-16 md:gap-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-10 sm:gap-12 md:gap-16 lg:gap-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {/* Lettuce Card */}
                 <Link href="/products/lettuce" className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
-                    <div className="w-[300px] h-[200px] overflow-hidden rounded-lg mb-4">
+                    <div className="w-full h-48 sm:h-56 md:h-64 overflow-hidden rounded-lg mb-4">
                         <Image
                             src="/farm5.jpg"  // Replace with actual image URL
                             alt="Lettuce"
@@ -29,7 +29,7 @@ export default function Products() {
 
                 {/* Microgreens Card */}
                 <Link href="/products/microgreens" className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
-                    <div className="w-[300px] h-[200px] overflow-hidden rounded-lg mb-4">
+                    <div className="w-full h-48 sm:h-56 md:h-64 overflow-hidden rounded-lg mb-4">
                         <Image
                             src="/farm13.jpg"  // Replace with actual image URL
                             alt="Microgreens"
@@ -49,7 +49,7 @@ export default function Products() {
 
                 {/* Herbs Card */}
                 <Link href="/products/herbs" className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
-                    <div className="w-[300px] h-[200px] overflow-hidden rounded-lg mb-4">
+                    <div className="w-full h-48 sm:h-56 md:h-64 overflow-hidden rounded-lg mb-4">
                         <Image
                             src="/farm8.jpeg"  // Replace with actual image URL
                             alt="Herbs"
@@ -69,7 +69,7 @@ export default function Products() {
 
                 {/* Eggs Card */}
                 <Link href="/products/eggs" className="card bg-white shadow-xl p-6 rounded-lg flex flex-col items-center text-center">
-                    <div className="w-[300px] h-[200px] overflow-hidden rounded-lg mb-4">
+                    <div className="w-full h-48 sm:h-56 md:h-64 overflow-hidden rounded-lg mb-4">
                         <Image
                             src="/farm9.jpeg"  // Replace with actual image URL
                             alt="Eggs"
