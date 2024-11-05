@@ -170,7 +170,7 @@ export default function Home() {
       </section>
 
       {/* Farmers Market Section */}
-      <section ref={farmersMarketRef} className="py-10 bg-white opacity-0">
+      <section ref={farmersMarketRef} className="py-10 px-8 sm:px-20 bg-white opacity-0">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
           Visit Us at the Farmers Markets
         </h2>
