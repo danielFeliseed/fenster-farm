@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
     return (
-      <div className="navbar bg-white shadow-md border-b py-4">
+      <div className="navbar bg-white shadow-md border-b px-3 py-4">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,9 +28,6 @@ export default function Navbar() {
               <li>
                 <Link href="/products">Products</Link>
               </li>
-              {/* <li>
-                <a>Our Story</a>
-              </li> */}
               <li>
                 <details>
                   <summary>Socials</summary>
@@ -74,9 +71,9 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <button className="btn-info hidden sm:block">
+          <a href="#contact_form" className="btn-info hidden sm:block">
             Contact Us
-          </button>
+          </a>
         </div>
       </div>
     );

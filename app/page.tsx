@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,6 +17,34 @@ export default function Home() {
   const productCarouselRef = useRef(null);
   const farmersMarketRef = useRef(null);
   const contactFormRef = useRef(null);
+  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("Failed to send message.");
+      }
+    } catch (error) {
+      setStatus("Failed to send message.");
+    }
+  };
+
 
   useEffect(() => {
     const animateOnScroll = (entries, observer) => {
@@ -203,41 +231,47 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section ref={contactFormRef} className="py-5 sm:py-10 bg-white opacity-0">
+      <section ref={contactFormRef} id="contact_form" className="py-5 sm:py-10 bg-white opacity-0">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Contact Us</h2>
         <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-12">
           Have questions? Want to learn more about our products or arrange a visit? Fill out the form below, and we’ll get in touch!
         </p>
         <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-          <form className="form-control space-y-6">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-gray-700 font-semibold">Name</span>
-              </label>
-              <input type="text" placeholder="Your Name" className="input input-bordered bg-white w-full" />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-gray-700 font-semibold">Email</span>
-              </label>
-              <input type="email" placeholder="Your Email" className="input input-bordered bg-white w-full" />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-gray-700 font-semibold">Subject</span>
-              </label>
-              <input type="text" placeholder="Subject" className="input input-bordered bg-white w-full" />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-gray-700 font-semibold">Message</span>
-              </label>
-              <textarea className="textarea textarea-bordered bg-white w-full h-24" placeholder="Your Message"></textarea>
-            </div>
-            <div>
-              <button type="submit" className="btn btn-black w-full mt-4">Send Message</button>
-            </div>
-          </form>
+        <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          value={formData.subject}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Send Message</button>
+      </form>
+      {status && <p>{status}</p>}
         </div>
       </section>
     </div>
