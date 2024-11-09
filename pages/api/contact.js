@@ -1,22 +1,21 @@
-
 import mailjet from 'node-mailjet';
-import { NextResponse } from 'next/server';
 
 const mailjetClient = mailjet.connect(
   process.env.MAILJET_API_KEY,
   process.env.MAILJET_API_SECRET
 );
 
-export async function POST(req) {
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+
   try {
-    const { name, email, subject, message } = await req.json();
+    const { name, email, subject, message } = req.body;
 
     // Validate input fields
     if (!name || !email || !subject || !message) {
-      return NextResponse.json(
-        { error: 'All fields are required' },
-        { status: 400 }
-      );
+      return res.status(400).json({ error: 'All fields are required' });
     }
 
     const request = {
@@ -24,12 +23,12 @@ export async function POST(req) {
         {
           From: {
             Email: process.env.MAILJET_SENDER_EMAIL,
-            Name: 'Fenster Farm Contact'
+            Name: 'Fenster Farm Contact',
           },
           To: [
             {
               Email: process.env.MAILJET_RECIPIENT_EMAIL,
-              Name: 'Fenster Farm'
+              Name: 'Fenster Farm',
             },
           ],
           Subject: `New Contact Form Submission: ${subject}`,
@@ -54,15 +53,9 @@ export async function POST(req) {
 
     await mailjetClient.post('send', { version: 'v3.1' }).request(request);
 
-    return NextResponse.json(
-      { message: 'Email sent successfully' },
-      { status: 200 }
-    );
+    return res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Mailjet Error:', error);
-    return NextResponse.json(
-      { error: 'Failed to send email' },
-      { status: 500 }
-    );
+    return res.status(500).json({ error: 'Failed to send email' });
   }
 }
