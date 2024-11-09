@@ -38,7 +38,7 @@ export default function ({ contactFormRef }) {
         <section ref={contactFormRef} id="contact_form" className="py-5 sm:py-10 bg-white opacity-0">
             <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Contact Us</h2>
             <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-                Have questions? Want to learn more about our products or arrange a visit? Fill out the form below, and we’ll get in touch!
+                Have questions? Want to learn more about our products? Fill out the form below, and we’ll get in touch!
             </p>
             <div className=" max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
