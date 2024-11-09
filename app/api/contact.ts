@@ -1,37 +1,68 @@
-import sgMail from "@sendgrid/mail";
-import { NextResponse } from "next/server";
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+import mailjet from 'node-mailjet';
+import { NextResponse } from 'next/server';
+
+const mailjetClient = mailjet.connect(
+  process.env.MAILJET_API_KEY,
+  process.env.MAILJET_API_SECRET
+);
 
 export async function POST(req) {
   try {
     const { name, email, subject, message } = await req.json();
 
+    // Validate input fields
     if (!name || !email || !subject || !message) {
-      return NextResponse.json({ error: "All fields are required" }, { status: 400 });
+      return NextResponse.json(
+        { error: 'All fields are required' },
+        { status: 400 }
+      );
     }
 
-    const msg = {
-      to: process.env.SENDGRID_SENDER_EMAIL,
-      from: process.env.SENDGRID_SENDER_EMAIL,
-      subject: `New Contact Form Submission: ${subject}`,
-      text: `
-        Name: ${name}
-        Email: ${email}
-        Message: ${message}
-      `,
-      html: `
-        <h3>New Contact Form Submission</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong><br/>${message}</p>
-      `,
+    const request = {
+      Messages: [
+        {
+          From: {
+            Email: process.env.MAILJET_SENDER_EMAIL,
+            Name: 'Your Name', // Replace with your name
+          },
+          To: [
+            {
+              Email: process.env.MAILJET_RECIPIENT_EMAIL,
+              Name: 'Your Name', // Replace with your name
+            },
+          ],
+          Subject: `New Contact Form Submission: ${subject}`,
+          TextPart: `
+            Name: ${name}
+            Email: ${email}
+            Message: ${message}
+                      `,
+          HTMLPart: `
+            <h3>New Contact Form Submission</h3>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Message:</strong><br/>${message}</p>
+                      `,
+          ReplyTo: {
+            Email: email,
+            Name: name,
+          },
+        },
+      ],
     };
 
-    await sgMail.send(msg);
+    await mailjetClient.post('send', { version: 'v3.1' }).request(request);
 
-    return NextResponse.json({ message: "Email sent successfully" }, { status: 200 });
+    return NextResponse.json(
+      { message: 'Email sent successfully' },
+      { status: 200 }
+    );
   } catch (error) {
-    return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
+    console.error('Mailjet Error:', error);
+    return NextResponse.json(
+      { error: 'Failed to send email' },
+      { status: 500 }
+    );
   }
 }
