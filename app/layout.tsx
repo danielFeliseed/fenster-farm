@@ -32,7 +32,6 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
-        {/* Footer */}
         <footer className="bg-white border py-6 text-center text-black">
           <p>© 2024 Fenster Farm | All Rights Reserved</p>
         </footer>
