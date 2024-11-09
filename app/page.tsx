@@ -5,8 +5,6 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -84,7 +82,7 @@ export default function Home() {
           loop
           autoPlay
           muted
-          playsInline // For mobile compatibility
+          playsInline
         ></video>
 
         <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -236,42 +234,46 @@ export default function Home() {
         <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-12">
           Have questions? Want to learn more about our products or arrange a visit? Fill out the form below, and we’ll get in touch!
         </p>
-        <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="subject"
-          placeholder="Subject"
-          value={formData.subject}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Send Message</button>
-      </form>
-      {status && <p>{status}</p>}
+        <div className=" max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="input bg-gray-100"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="input bg-gray-100"
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+              className="input bg-gray-100"
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="textarea bg-gray-100"
+            />
+            <button className="btn" type="submit">Send Message</button>
+          </form>
+          {status && <p>{status}</p>}
         </div>
       </section>
     </div>
