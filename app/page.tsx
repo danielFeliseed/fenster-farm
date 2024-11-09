@@ -49,6 +49,14 @@ export default function Home() {
     setTimeout(() => setToastIsVisible(false), 5000);
   };
 
+  useEffect(() => {
+    const videoElement = document.querySelector("video");
+    if (videoElement) {
+      videoElement.play().catch((error) => {
+        console.error("Video playback failed:", error);
+      });
+    }
+  }, []);
 
   useEffect(() => {
     const animateOnScroll = (entries, observer) => {
