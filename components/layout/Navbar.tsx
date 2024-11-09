@@ -64,7 +64,7 @@ const Navbar = () => {
           </div>
 
           {/* Logo - centered on mobile, left-aligned on desktop */}
-          <div className="flex-1 flex justify-center lg:justify-start">
+          <div className="flex-1 flex justify-center mr-6 md:mr-0 lg:justify-start">
             <Link 
               href="/" 
               className="text-2xl font-bold text-black hover:text-gray-700 transition-colors"
