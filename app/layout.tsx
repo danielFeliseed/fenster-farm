@@ -33,7 +33,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         {/* Footer */}
-        <footer className="bg-white border py-6 mt-12 text-center text-black">
+        <footer className="bg-white border py-6 text-center text-black">
           <p>© 2024 Fenster Farm | All Rights Reserved</p>
         </footer>
       </body>
