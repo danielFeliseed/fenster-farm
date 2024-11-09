@@ -72,7 +72,7 @@ export default function Navbar() {
       </div>
       <div className="navbar-end ">
         <Link href="/#contact_form" scroll={true}>
-          <button className="btn hidden sm:block">Contact Us</button>
+          <button className="text-black hidden sm:block">Contact Us</button>
         </Link>
       </div>
     </div>
