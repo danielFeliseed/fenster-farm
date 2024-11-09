@@ -31,18 +31,11 @@ export default function Home() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
-      if (response.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        setStatus("Failed to send message.");
-      }
     } catch (error) {
-      setStatus("Failed to send message.");
+      console.error(error);
     }
-  };
 
+  };
 
   useEffect(() => {
     const animateOnScroll = (entries, observer) => {
